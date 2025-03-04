@@ -1,4 +1,4 @@
-/* General Styling */
+/* General Layout */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #F2F2F2;
@@ -6,6 +6,7 @@ body {
     color: #1B3A5E;
 }
 
+/* Header Styling */
 h1 {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 2em;
@@ -14,22 +15,16 @@ h1 {
     margin-bottom: 10px;
 }
 
-.description {
-    font-size: 1.2em;
-    color: #1B3A5E;
-    margin-bottom: 20px;
-}
-
 /* Equalizer Layout */
 .equalizer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     gap: 40px;
     margin-top: 20px;
 }
 
-/* Individual Slider Container */
+/* Sliders */
 .slider-container {
     display: flex;
     flex-direction: column;
@@ -39,10 +34,9 @@ h1 {
 
 /* Vertical Sliders */
 .vertical-slider {
-    -webkit-appearance: none; /* Remove default styles */
+    -webkit-appearance: none;
     appearance: none;
-    writing-mode: vertical-lr; /* Ensures correct vertical rendering */
-    transform: rotate(180deg); /* Flips to match traditional equalizer */
+    writing-mode: vertical-lr;
     width: 10px;
     height: 150px;
     background: #ddd;
@@ -50,18 +44,46 @@ h1 {
     outline: none;
 }
 
-/* Info Icon */
-.info-icon {
-    font-size: 24px;
+.vertical-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ff79c6;
+    border-radius: 50%;
     cursor: pointer;
-    display: inline-block;
-    margin-left: 10px;
+}
+
+/* Buttons */
+button {
+    background: #D65780;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #a23e5c;
+}
+
+/* Reset Button */
+button.reset {
+    background: #999;
+}
+
+button.reset:hover {
+    background: #666;
 }
 
 /* Fact Box */
 .fact-container {
     position: relative;
     display: inline-block;
+    margin-top: 20px;
 }
 
 .fact-box {
@@ -76,7 +98,6 @@ h1 {
     top: 30px;
     left: -50px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease-in-out;
 }
 
 .fact-box p {
@@ -95,32 +116,4 @@ h1 {
 
 .fact-box button:hover {
     background: #a23e5c;
-}
-
-
-/* Custom Thumb Styling */
-.vertical-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #ff79c6;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.vertical-slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #ff79c6;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* Result Text */
-.result {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #1B3A5E;
-    margin-top: 20px;
 }
