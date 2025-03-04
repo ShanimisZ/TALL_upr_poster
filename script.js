@@ -79,3 +79,31 @@ document.addEventListener("DOMContentLoaded", function() {
     checkButton.addEventListener("click", updateResult);
     resetButton.addEventListener("click", resetSliders);
 });
+
+// Array of scientific facts with citations
+const facts = [
+    "As UPR can lead to drug-resistance, a better understanding of ER stress/UPR signals has the potential to develop effective anti-cancer therapies. (PMC7072709)",
+    "We demonstrate cross talk between the IRE1 and PERK branches of the UPR, where IRE1 helps sustain PERK expression. (Nature, 2024)",
+    "The overexpression of IRE1 and ATF6 in many cancers suggests their role in tumor progression. (AACR, 2015)",
+    "UPR inhibits antigen presentation, suppressing T-cell-dependent anticancer immunity. (BioSignaling, 2023)"
+];
+
+let factIndex = 0;
+
+// Function to show/hide the fact box
+function toggleFactBox() {
+    let factBox = document.getElementById("factBox");
+    factBox.style.display = factBox.style.display === "block" ? "none" : "block";
+}
+
+// Function to rotate facts
+function nextFact() {
+    factIndex = (factIndex + 1) % facts.length;
+    document.getElementById("factText").innerText = facts[factIndex];
+}
+
+// Initialize with the first fact
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("factText").innerText = facts[0];
+});
+
