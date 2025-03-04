@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
     resetButton.addEventListener("click", resetSliders);
 });
 
-// Array of scientific facts with citations
+// Facts Array
 const facts = [
     "As UPR can lead to drug-resistance, a better understanding of ER stress/UPR signals has the potential to develop effective anti-cancer therapies. (PMC7072709)",
     "We demonstrate cross talk between the IRE1 and PERK branches of the UPR, where IRE1 helps sustain PERK expression. (Nature, 2024)",
@@ -90,20 +90,24 @@ const facts = [
 
 let factIndex = 0;
 
-// Function to show/hide the fact box
+// Toggle Fact Box
 function toggleFactBox() {
     let factBox = document.getElementById("factBox");
     factBox.style.display = factBox.style.display === "block" ? "none" : "block";
 }
 
-// Function to rotate facts
+// Rotate Facts
 function nextFact() {
     factIndex = (factIndex + 1) % facts.length;
     document.getElementById("factText").innerText = facts[factIndex];
 }
 
-// Initialize with the first fact
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("factText").innerText = facts[0];
-});
+// Evaluate T-ALL Progression
+function evaluateUPR() {
+    document.getElementById("result").innerText = "Processing UPR response... (Coming soon!)";
+}
 
+// Reset Experiment
+function resetExperiment() {
+    document.getElementById("result").innerText = "Adjust the sliders and click below to see the effect.";
+}
