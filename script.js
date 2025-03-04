@@ -3,30 +3,45 @@ document.addEventListener("DOMContentLoaded", function() {
     const perkSlider = document.getElementById("perk");
     const ire1Slider = document.getElementById("ire1");
     const resultText = document.getElementById("result");
+    const checkButton = document.createElement("button");
+
+    checkButton.textContent = "Check if T-ALL will Progress";
+    checkButton.style.display = "block";
+    checkButton.style.margin = "20px auto";
+    checkButton.style.padding = "10px 15px";
+    checkButton.style.fontSize = "16px";
+    checkButton.style.cursor = "pointer";
+    document.body.appendChild(checkButton);
+
+    function getLevel(value) {
+        if (value < 35) return "Low";
+        if (value <= 75) return "Medium";
+        return "High";
+    }
 
     function updateResult() {
-        const atf6 = parseInt(atf6Slider.value);
-        const perk = parseInt(perkSlider.value);
-        const ire1 = parseInt(ire1Slider.value);
+        let atf6 = getLevel(parseInt(atf6Slider.value));
+        let perk = getLevel(parseInt(perkSlider.value));
+        let ire1 = getLevel(parseInt(ire1Slider.value));
         let response = "";
 
         // Poster-based evidence (🔬)
-        if (atf6 <= 30 && perk >= 40 && ire1 >= 40) {
+        if (atf6 === "Low" && perk === "Medium" && ire1 === "Medium") {
             response = "UPR disruption impairs T-ALL adaptation and survival.";
-        } else if (atf6 >= 70 && perk >= 50 && ire1 >= 50) {
+        } else if (atf6 === "High" && perk === "Medium" && ire1 === "Medium") {
             response = "UPR remains stable—T-ALL survival maintained.";
-        } else if (atf6 >= 80 && perk >= 80 && ire1 >= 80) {
+        } else if (atf6 === "High" && perk === "High" && ire1 === "High") {
             response = "Chronic ER stress—T-ALL survival impaired.";
         }
         
         // Hypothesis-based (🧪)
-        else if (atf6 <= 20 && perk <= 20 && ire1 <= 20) {
+        else if (atf6 === "Low" && perk === "Low" && ire1 === "Low") {
             response = "🧪 Severe UPR suppression—T-ALL cells may rely on alternative survival pathways.";
             resultText.style.color = "#E9C9FF";
-        } else if (atf6 <= 30 && perk <= 30 && ire1 >= 40) {
+        } else if (atf6 === "Low" && perk === "Low" && ire1 === "Medium") {
             response = "🧪 Reduced UPR signaling—T-ALL cells may be vulnerable to stress.";
             resultText.style.color = "#E9C9FF";
-        } else if (atf6 >= 70 && perk <= 30 && ire1 <= 30) {
+        } else if (atf6 === "High" && perk === "Low" && ire1 === "Low") {
             response = "🧪 Chronic ATF6 stress—ER dysfunction may impair T-ALL survival.";
             resultText.style.color = "#E9C9FF";
         }
@@ -40,9 +55,5 @@ document.addEventListener("DOMContentLoaded", function() {
         resultText.textContent = response;
     }
 
-    atf6Slider.addEventListener("input", updateResult);
-    perkSlider.addEventListener("input", updateResult);
-    ire1Slider.addEventListener("input", updateResult);
-
-    updateResult(); // Initialize default response
+    checkButton.addEventListener("click", updateResult);
 });
