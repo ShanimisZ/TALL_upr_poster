@@ -1,21 +1,45 @@
-/* General Layout */
+/* General Page Styling */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #F2F2F2;
     text-align: center;
     color: #1B3A5E;
+    padding: 20px;
 }
 
-/* Header Styling */
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headers */
 h1 {
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: 700;
+    color: #D65780;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.6em;
     color: #D65780;
     margin-bottom: 10px;
 }
 
-/* Equalizer Layout */
+h3 {
+    font-size: 1.4em;
+    color: #1B3A5E;
+    margin-top: 20px;
+}
+
+/* Equalizer Sliders */
 .equalizer {
     display: flex;
     justify-content: center;
@@ -24,96 +48,51 @@ h1 {
     margin-top: 20px;
 }
 
-/* Sliders */
-.slider-container {
+/* Button Styling */
+.button-group {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
 }
 
-/* Vertical Sliders */
-.vertical-slider {
-    -webkit-appearance: none;
-    appearance: none;
-    writing-mode: vertical-lr;
-    width: 10px;
-    height: 150px;
-    background: #ddd;
-    border-radius: 8px;
-    outline: none;
-}
-
-.vertical-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #ff79c6;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* Buttons */
 button {
     background: #D65780;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 12px 18px;
+    border-radius: 6px;
     font-size: 1em;
     cursor: pointer;
-    margin-top: 10px;
+    transition: 0.2s ease-in-out;
 }
 
 button:hover {
-    background: #a23e5c;
+    background: #b04866;
 }
 
-/* Reset Button */
-button.reset {
-    background: #999;
+.reset {
+    background: #888;
 }
 
-button.reset:hover {
+.reset:hover {
     background: #666;
 }
 
-/* Fact Box */
-.fact-container {
-    position: relative;
-    display: inline-block;
-    margin-top: 20px;
+/* About Me & Feedback Sections */
+.about-container, .feedback-container {
+    margin-top: 40px;
+    text-align: center;
 }
 
-.fact-box {
-    display: none;
-    position: absolute;
-    background: white;
-    color: #1B3A5E;
+.feedback-container textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
     border: 2px solid #D65780;
-    border-radius: 10px;
-    padding: 15px;
-    width: 300px;
-    top: 30px;
-    left: -50px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.fact-box p {
-    font-size: 1em;
-    margin-bottom: 10px;
-}
-
-.fact-box button {
-    background: #D65780;
-    color: white;
-    border: none;
-    padding: 5px 10px;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-.fact-box button:hover {
-    background: #a23e5c;
+.feedback-container button {
+    margin-top: 10px;
 }
