@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPR Equalizer Game</title>
+    <title>Interactive T-ALL UPR Poster</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
 </head>
@@ -11,10 +11,24 @@
 
     <div class="container">
         <h1>Welcome to My Interactive T-ALL UPR Poster</h1>
-        <p class="description">This site hosts the interactive equalizer game and additional insights.</p>
+        <p class="intro-text">
+            This site hosts the interactive equalizer game and additional insights.
+        </p>
 
-        <h2>Interactive UPR Equalizer Game</h2>
-        <p>Move the sliders to adjust ATF6, PERK, and IRE1 levels. See how T-ALL progression responds!</p>
+        <!-- Science Explanation -->
+        <div class="science-section">
+            <h2>🔬 The Science Behind the Game</h2>
+            <p>
+                The <strong>Unfolded Protein Response (UPR)</strong> is a critical cellular pathway that helps cancer cells adapt to stress.
+                In <strong>T-cell Acute Lymphoblastic Leukemia (T-ALL)</strong>, UPR activation can be both a <strong>survival advantage</strong> and a 
+                <strong>therapeutic vulnerability</strong>. My research explores how <strong>modulating UPR components (ATF6, PERK, IRE1)</strong> 
+                can impact T-ALL progression. This interactive game lets you <em>experiment</em> with different UPR levels to see how they influence T-ALL behavior.
+            </p>
+        </div>
+
+        <!-- Interactive UPR Equalizer -->
+        <h2>🧪 Interactive UPR Equalizer Game</h2>
+        <p>Move the sliders to adjust ATF6, PERK, and IRE1 levels. Click the button to see how T-ALL progression responds!</p>
 
         <div class="equalizer">
             <div class="slider-container">
@@ -31,24 +45,42 @@
             </div>
         </div>
 
+        <!-- Display Result -->
         <p id="result" class="result">Adjust the sliders and click below to see the effect.</p>
 
-        <div class="buttons">
-            <button onclick="evaluateUPR()">Check if T-ALL will Progress</button>
-            <button onclick="resetExperiment()" class="reset">Reset Experiment</button>
+        <!-- Buttons -->
+        <div class="button-group">
+            <button id="checkProgress">Check if T-ALL will Progress</button>
+            <button id="resetExperiment" class="reset">Reset Experiment</button>
         </div>
 
-        <!-- "Did You Know?" Fact Box -->
-        <div class="fact-container">
-            <span class="info-icon" onclick="toggleFactBox()">ℹ️</span>
-            <div class="fact-box" id="factBox">
-                <p id="factText">Loading fact...</p>
-                <button onclick="nextFact()">Next Fact</button>
-            </div>
+        <!-- About Me Section -->
+        <div class="about-container">
+            <h2>👩‍🔬 About Me</h2>
+            <p>
+                Hi, I'm <strong>Shani Mistriel Zerbib</strong>, PhD Candidate in Experimental Immunology. My research focuses on 
+                <strong>targeting the Unfolded Protein Response (UPR) in T-ALL</strong> to develop new therapeutic strategies. 
+                I specialize in <strong>mouse models, flow cytometry, and leukemia biology</strong>.
+            </p>
+            <h3>🔗 Let's Connect!</h3>
+            <p>
+                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a> • 
+                <a href="https://orcid.org/" target="_blank">ORCID</a> • 
+                <a href="mailto:your.email@example.com">Email Me</a>
+            </p>
         </div>
 
-    </div>
+        <!-- Feedback Section -->
+        <div class="feedback-container">
+            <h2>💬 Questions? Feedback?</h2>
+            <p>Have thoughts about the interactive tool or my research? Let me know!</p>
+            <textarea id="feedback" placeholder="Share your thoughts..."></textarea>
+            <button id="sendFeedback">Send</button>
+        </div>
+
+    </div> <!-- End of Main Container -->
 
     <script src="script.js"></script>
+
 </body>
 </html>
