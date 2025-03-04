@@ -36,17 +36,18 @@ h1 {
     gap: 10px;
 }
 
-/* Vertical Slider Styles */
 .vertical-slider {
     -webkit-appearance: none;
     appearance: none;
-    writing-mode: vertical-lr;  /* Ensure compatibility across browsers */
     width: 10px;
     height: 150px;
     background: #ddd;
     border-radius: 8px;
     outline: none;
+    transform: rotate(-90deg);  /* Rotate slider to make it vertical */
+    direction: rtl;  /* Fix direction issues */
 }
+
 
 /* Custom Thumb Styling for WebKit Browsers */
 .vertical-slider::-webkit-slider-thumb {
