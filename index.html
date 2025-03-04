@@ -8,79 +8,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <div class="container">
         <h1>Welcome to My Interactive T-ALL UPR Poster</h1>
-        <p class="intro-text">
-            This site hosts the interactive equalizer game and additional insights.
-        </p>
+        <p class="intro-text">This site hosts the interactive equalizer game and additional insights.</p>
 
-        <!-- Science Explanation -->
-        <div class="science-section">
+        <section class="science-section">
             <h2>🔬 The Science Behind the Game</h2>
             <p>
                 The <strong>Unfolded Protein Response (UPR)</strong> is a critical cellular pathway that helps cancer cells adapt to stress.
-                In <strong>T-cell Acute Lymphoblastic Leukemia (T-ALL)</strong>, UPR activation can be both a <strong>survival advantage</strong> and a 
-                <strong>therapeutic vulnerability</strong>. My research explores how <strong>modulating UPR components (ATF6, PERK, IRE1)</strong> 
-                can impact T-ALL progression. This interactive game lets you <em>experiment</em> with different UPR levels to see how they influence T-ALL behavior.
+                In <strong>T-cell Acute Lymphoblastic Leukemia (T-ALL)</strong>, UPR activation can be both a 
+                <strong>survival advantage</strong> and a <strong>therapeutic vulnerability</strong>.
+                My research explores how <strong>modulating UPR components (ATF6, PERK, IRE1)</strong> impacts T-ALL progression.
             </p>
-        </div>
+        </section>
 
-        <!-- Interactive UPR Equalizer -->
-        <h2>🧪 Interactive UPR Equalizer Game</h2>
-        <p>Move the sliders to adjust ATF6, PERK, and IRE1 levels. Click the button to see how T-ALL progression responds!</p>
-
-        <div class="equalizer">
-            <div class="slider-container">
-                <label for="atf6">ATF6</label>
-                <input type="range" id="atf6" min="0" max="100" value="50" class="vertical-slider">
+        <section class="game-section">
+            <h2>🎛️ Interactive UPR Equalizer Game</h2>
+            <p>Move the sliders to adjust ATF6, PERK, and IRE1 levels. Click the button to see how T-ALL progression responds!</p>
+            
+            <div class="equalizer">
+                <div class="slider-container">
+                    <label for="atf6">ATF6:</label>
+                    <input type="range" id="atf6" min="0" max="100" value="50" class="slider">
+                </div>
+                <div class="slider-container">
+                    <label for="perk">PERK:</label>
+                    <input type="range" id="perk" min="0" max="100" value="50" class="slider">
+                </div>
+                <div class="slider-container">
+                    <label for="ire1">IRE1:</label>
+                    <input type="range" id="ire1" min="0" max="100" value="50" class="slider">
+                </div>
             </div>
-            <div class="slider-container">
-                <label for="perk">PERK</label>
-                <input type="range" id="perk" min="0" max="100" value="50" class="vertical-slider">
-            </div>
-            <div class="slider-container">
-                <label for="ire1">IRE1</label>
-                <input type="range" id="ire1" min="0" max="100" value="50" class="vertical-slider">
-            </div>
-        </div>
 
-        <!-- Display Result -->
-        <p id="result" class="result">Adjust the sliders and click below to see the effect.</p>
+            <p id="result" class="result">Adjust the sliders and click below to see the effect.</p>
 
-        <!-- Buttons -->
-        <div class="button-group">
-            <button id="checkProgress">Check if T-ALL will Progress</button>
-            <button id="resetExperiment" class="reset">Reset Experiment</button>
-        </div>
+            <button id="checkBtn">Check if T-ALL will Progress</button>
+            <button id="resetBtn" class="reset">Reset Experiment</button>
+        </section>
 
-        <!-- About Me Section -->
-        <div class="about-container">
-            <h2>👩‍🔬 About Me</h2>
+        <section class="about-section">
+            <h2>📜 About Me</h2>
             <p>
-                Hi, I'm <strong>Shani Mistriel Zerbib</strong>, PhD Candidate in Experimental Immunology. My research focuses on 
-                <strong>targeting the Unfolded Protein Response (UPR) in T-ALL</strong> to develop new therapeutic strategies. 
+                Hi, I'm <strong>Shani Mistriel Zerbib</strong>, PhD Candidate in Experimental Immunology. 
+                My research focuses on <strong>targeting the Unfolded Protein Response (UPR) in T-ALL</strong> to develop new therapeutic strategies.
                 I specialize in <strong>mouse models, flow cytometry, and leukemia biology</strong>.
             </p>
-            <h3>🔗 Let's Connect!</h3>
-            <p>
-                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a> • 
-                <a href="https://orcid.org/" target="_blank">ORCID</a> • 
-                <a href="mailto:your.email@example.com">Email Me</a>
-            </p>
-        </div>
 
-        <!-- Feedback Section -->
-        <div class="feedback-container">
+            <div class="links">
+                <a href="https://www.linkedin.com/in/shani-zerbib-mistriel-70a89171/" target="_blank">🔗 LinkedIn</a> |
+                <a href="https://orcid.org/0000-0002-4953-2193" target="_blank">🧬 ORCID</a> |
+                <a href="mailto:shani.mitriel@mail.huji.ac.il">📧 Email Me</a>
+            </div>
+        </section>
+
+        <section class="feedback-section">
             <h2>💬 Questions? Feedback?</h2>
             <p>Have thoughts about the interactive tool or my research? Let me know!</p>
             <textarea id="feedback" placeholder="Share your thoughts..."></textarea>
             <button id="sendFeedback">Send</button>
-        </div>
-
-    </div> <!-- End of Main Container -->
+        </section>
+    </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
