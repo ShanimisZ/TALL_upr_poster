@@ -23,7 +23,8 @@ h1 {
 .equalizer {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: flex-end;
+    gap: 30px;
 }
 
 .slider-container.vertical {
@@ -33,10 +34,30 @@ h1 {
 }
 
 .vertical-slider {
-    writing-mode: bt-lr; /* Vertical orientation */
     -webkit-appearance: slider-vertical;
     appearance: slider-vertical;
     height: 150px;
+    width: 15px;
+    background: linear-gradient(to bottom, #ff79c6, #bd93f9);
+    border-radius: 8px;
+}
+
+.vertical-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #ff79c6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.vertical-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #ff79c6;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 
