@@ -76,11 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
         resultText.textContent = "";
     }
 
-    checkButton.addEventListener("click", updateResult);
-    resetButton.addEventListener("click", resetSliders);
-});
-
-// Facts Array
+    // Facts Array
 const facts = [
     "As UPR can lead to drug-resistance, a better understanding of ER stress/UPR signals has the potential to develop effective anti-cancer therapies. (PMC7072709)",
     "We demonstrate cross talk between the IRE1 and PERK branches of the UPR, where IRE1 helps sustain PERK expression. (Nature, 2024)",
@@ -111,3 +107,10 @@ function evaluateUPR() {
 function resetExperiment() {
     document.getElementById("result").innerText = "Adjust the sliders and click below to see the effect.";
 }
+
+    checkButton.addEventListener("click", updateResult);
+    resetButton.addEventListener("click", resetSliders);
+});
+
+
+
