@@ -1,14 +1,11 @@
-/* General Page Styles */
+/* General Styling */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #F2F2F2;
     text-align: center;
     color: #1B3A5E;
-    margin: 0;
-    padding: 0;
 }
 
-/* Title Styling */
 h1 {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 2em;
@@ -17,20 +14,19 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Description Text */
 .description {
     font-size: 1.2em;
     color: #1B3A5E;
     margin-bottom: 20px;
 }
 
-/* Container for Equalizer */
+/* Equalizer Layout */
 .equalizer {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     gap: 40px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 /* Individual Slider Container */
@@ -41,70 +37,42 @@ h1 {
     gap: 10px;
 }
 
-/* Label Styles */
-.slider-container label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 1.1em;
-}
-
-/* Vertical Slider Styles */
+/* Vertical Sliders */
 .vertical-slider {
-    -webkit-appearance: none;
+    -webkit-appearance: none; /* Remove default styles */
     appearance: none;
-    writing-mode: vertical-lr;  /* Ensures cross-browser compatibility */
-    width: 12px;
+    writing-mode: vertical-lr; /* Ensures correct vertical rendering */
+    transform: rotate(180deg); /* Flips to match traditional equalizer */
+    width: 10px;
     height: 150px;
     background: #ddd;
     border-radius: 8px;
     outline: none;
-    cursor: pointer;
 }
 
-/* Custom Slider Thumb for WebKit Browsers */
+/* Custom Thumb Styling */
 .vertical-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 22px;
-    height: 22px;
-    background: #D65780;
+    width: 20px;
+    height: 20px;
+    background: #ff79c6;
     border-radius: 50%;
     cursor: pointer;
 }
 
-/* Custom Slider Thumb for Firefox */
 .vertical-slider::-moz-range-thumb {
-    width: 22px;
-    height: 22px;
-    background: #D65780;
+    width: 20px;
+    height: 20px;
+    background: #ff79c6;
     border-radius: 50%;
     cursor: pointer;
 }
 
-/* Custom Slider Thumb for Edge */
-.vertical-slider::-ms-thumb {
-    width: 22px;
-    height: 22px;
-    background: #D65780;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* Result Display */
+/* Result Text */
 .result {
     font-size: 1.3em;
     font-weight: bold;
     color: #1B3A5E;
     margin-top: 20px;
-}
-
-/* Add Padding to Main Container */
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
 }
