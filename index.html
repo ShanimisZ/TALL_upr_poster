@@ -29,6 +29,13 @@
                 <label for="ire1">IRE1:</label>
                 <input type="range" id="ire1" min="0" max="100" value="50" class="slider">
             </div>
+            <div class="fact-container">
+            <span class="info-icon" onclick="toggleFactBox()">ℹ️</span>
+            <div class="fact-box" id="factBox">
+            <p id="factText">Loading fact...</p>
+            <button onclick="nextFact()">Next Fact</button>
+            </div>
+            </div>
         </div>
 
         <p id="result" class="result">Adjust the sliders to see the effect.</p>
