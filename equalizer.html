@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPR Equalizer Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .slider-container {
+            margin: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>UPR Equalizer: Adjust the Sliders</h1>
+    <p>Move the sliders to adjust ATF6, PERK, and IRE1 levels. See how T-ALL progression responds!</p>
+
+    <div class="slider-container">
+        <label for="atf6">ATF6:</label>
+        <input type="range" id="atf6" min="0" max="100" value="50" oninput="updateResult()">
+    </div>
+    
+    <div class="slider-container">
+        <label for="perk">PERK:</label>
+        <input type="range" id="perk" min="0" max="100" value="50" oninput="updateResult()">
+    </div>
+    
+    <div class="slider-container">
+        <label for="ire1">IRE1:</label>
+        <input type="range" id="ire1" min="0" max="100" value="50" oninput="updateResult()">
+    </div>
+
+    <div class="result" id="result">Adjust the sliders to see the effect.</div>
+
+    <script>
+        function updateResult() {
+            let atf6 = document.getElementById("atf6").value;
+            let perk = document.getElementById("perk").value;
+            let ire1 = document.getElementById("ire1").value;
+            let resultText = "";
+            
+            if (atf6 < 30 && perk > 70 && ire1 > 70) {
+                resultText = "📈 T-ALL progression increases!";
+            } else if (atf6 > 70 && perk < 30 && ire1 < 30) {
+                resultText = "📉 T-ALL progression decreases!";
+            } else {
+                resultText = "➡️ No significant change in T-ALL progression.";
+            }
+            
+            document.getElementById("result").innerText = resultText;
+        }
+    </script>
+</body>
+</html>
