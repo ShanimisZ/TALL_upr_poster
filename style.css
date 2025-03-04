@@ -117,3 +117,55 @@ button.reset:hover {
 .fact-box button:hover {
     background: #a23e5c;
 }
+
+/* Context Section */
+h2 {
+    color: #D65780;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* Bio & Contact */
+p {
+    font-size: 1.1em;
+    color: #1B3A5E;
+}
+
+a {
+    color: #D65780;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Feedback Form */
+form {
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid #D65780;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background: #D65780;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background: #a23e5c;
+}
