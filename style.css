@@ -50,6 +50,54 @@ h1 {
     outline: none;
 }
 
+/* Info Icon */
+.info-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Fact Box */
+.fact-container {
+    position: relative;
+    display: inline-block;
+}
+
+.fact-box {
+    display: none;
+    position: absolute;
+    background: white;
+    color: #1B3A5E;
+    border: 2px solid #D65780;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    top: 30px;
+    left: -50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fact-box p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.fact-box button {
+    background: #D65780;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fact-box button:hover {
+    background: #a23e5c;
+}
+
+
 /* Custom Thumb Styling */
 .vertical-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
