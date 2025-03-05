@@ -3,71 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive T-ALL UPR Poster</title>
+    <title>UPR Equalizer Game</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>Welcome to My Interactive T-ALL UPR Poster</h1>
-        <p class="intro-text">This site hosts the interactive equalizer game and additional insights.</p>
+        <p>This site hosts the interactive equalizer game and additional insights.</p>
 
-        <section class="science-section">
-            <h2>🔬 The Science Behind the Game</h2>
-            <p>
-                The <strong>Unfolded Protein Response (UPR)</strong> is a critical cellular pathway that helps cancer cells adapt to stress.
-                In <strong>T-cell Acute Lymphoblastic Leukemia (T-ALL)</strong>, UPR activation can be both a 
-                <strong>survival advantage</strong> and a <strong>therapeutic vulnerability</strong>.
-                My research explores how <strong>modulating UPR components (ATF6, PERK, IRE1)</strong> impacts T-ALL progression.
-            </p>
-        </section>
+        <h2>🔬 The Science Behind the Game</h2>
+        <p>
+            The <b>Unfolded Protein Response (UPR)</b> is a critical cellular pathway that helps cancer cells adapt to stress. 
+            In <b>T-cell Acute Lymphoblastic Leukemia (T-ALL)</b>, UPR activation can be both a <b>survival advantage</b> and a 
+            <b>therapeutic vulnerability</b>. My research explores how <b>modulating UPR components (ATF6, PERK, IRE1)</b> impacts T-ALL progression.
+        </p>
 
-        <section class="game-section">
-            <h2>🎛️ Interactive UPR Equalizer Game</h2>
-            <p>Move the sliders to adjust ATF6, PERK, and IRE1 levels. Click the button to see how T-ALL progression responds!</p>
-            
-            <div class="equalizer">
-                <div class="slider-container">
-                    <label for="atf6">ATF6:</label>
-                    <input type="range" id="atf6" min="0" max="100" value="50" class="slider">
-                </div>
-                <div class="slider-container">
-                    <label for="perk">PERK:</label>
-                    <input type="range" id="perk" min="0" max="100" value="50" class="slider">
-                </div>
-                <div class="slider-container">
-                    <label for="ire1">IRE1:</label>
-                    <input type="range" id="ire1" min="0" max="100" value="50" class="slider">
-                </div>
+        <h2>🧪 Interactive UPR Equalizer Game</h2>
+        <p>Move the sliders to adjust ATF6, PERK, and IRE1 levels. Click the button to see how T-ALL progression responds!</p>
+
+        <div class="equalizer">
+            <div class="slider-container">
+                <label for="atf6">ATF6:</label>
+                <input type="range" id="atf6" min="0" max="100" value="50" class="vertical-slider">
             </div>
-
-            <p id="result" class="result">Adjust the sliders and click below to see the effect.</p>
-
-            <button id="checkBtn">Check if T-ALL will Progress</button>
-            <button id="resetBtn" class="reset">Reset Experiment</button>
-        </section>
-
-        <section class="about-section">
-            <h2>📜 About Me</h2>
-            <p>
-                Hi, I'm <strong>Shani Mistriel Zerbib</strong>, PhD Candidate in Experimental Immunology. 
-                My research focuses on <strong>targeting the Unfolded Protein Response (UPR) in T-ALL</strong> to develop new therapeutic strategies.
-                I specialize in <strong>mouse models, flow cytometry, and leukemia biology</strong>.
-            </p>
-
-            <div class="links">
-                <a href="https://www.linkedin.com/in/shani-zerbib-mistriel-70a89171/" target="_blank">🔗 LinkedIn</a> |
-                <a href="https://orcid.org/0000-0002-4953-2193" target="_blank">🧬 ORCID</a> |
-                <a href="mailto:shani.mitriel@mail.huji.ac.il">📧 Email Me</a>
+            <div class="slider-container">
+                <label for="perk">PERK:</label>
+                <input type="range" id="perk" min="0" max="100" value="50" class="vertical-slider">
             </div>
-        </section>
+            <div class="slider-container">
+                <label for="ire1">IRE1:</label>
+                <input type="range" id="ire1" min="0" max="100" value="50" class="vertical-slider">
+            </div>
+        </div>
 
-        <section class="feedback-section">
-            <h2>💬 Questions? Feedback?</h2>
-            <p>Have thoughts about the interactive tool or my research? Let me know!</p>
-            <textarea id="feedback" placeholder="Share your thoughts..."></textarea>
-            <button id="sendFeedback">Send</button>
-        </section>
+        <p id="result" class="result">Adjust the sliders and click below to see the effect.</p>
+
+        <button class="check-btn">Check if T-ALL will Progress</button>
+        <button class="reset-btn">Reset Experiment</button>
+
+        <h2>📜 About Me</h2>
+        <p>
+            Hi, I'm <b>Shani Mistriel Zerbib</b>, PhD Candidate in Experimental Immunology. My research focuses on 
+            <b>targeting the Unfolded Protein Response (UPR) in T-ALL</b> to develop new therapeutic strategies. 
+            I specialize in <b>mouse models, flow cytometry, and leukemia biology</b>.
+        </p>
+
+        <h3>🔗 Let's Connect!</h3>
+        <a href="https://www.linkedin.com/in/shani-zerbib-mistriel-70a89171/" target="_blank">LinkedIn</a> |
+        <a href="https://orcid.org/0000-0002-4953-2193" target="_blank">ORCID</a> |
+        <a href="mailto:shani.mitriel@mail.huji.ac.il">📧 Email Me</a>
+
+        <h2>💬 Questions? Feedback?</h2>
+        <p>Have thoughts about the interactive tool or my research? Let me know!</p>
+        <div class="feedback-container">
+            <textarea id="feedbackMessage" class="feedback-input" placeholder="Share your thoughts..."></textarea>
+            <button id="feedbackSend" class="feedback-button">Send</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
