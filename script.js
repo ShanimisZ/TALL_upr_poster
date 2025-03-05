@@ -26,10 +26,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function resetSliders() {
-        sliders.forEach(slider => slider.value = 50);
+        sliders.forEach(slider => {
+            slider.value = 50; // Default value
+            slider.dispatchEvent(new Event("input")); // Trigger event so UI updates
+        });
         resultText.textContent = "Adjust the sliders and click below to see the effect.";
     }
 
+    sliders.forEach(slider => slider.addEventListener("input", updateResult));
     checkButton.addEventListener("click", updateResult);
     resetButton.addEventListener("click", resetSliders);
 });
