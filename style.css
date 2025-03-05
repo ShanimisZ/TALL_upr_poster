@@ -26,12 +26,32 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Sliders Matching Equalizer Colors */
 .slider {
     appearance: none;
     height: 12px;
     background: linear-gradient(to right, #D65780, #A655E2);
     border-radius: 6px;
+    cursor: pointer;
 }
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #F57FD7;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #F57FD7;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 
 button {
     background: #D65780;
