@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const factText = document.getElementById("factText");
     const nextFactBtn = document.getElementById("nextFactBtn");
     const factOverlay = document.getElementById("factOverlay");
-    overlay.classList.add("fact-overlay");
-    document.body.appendChild(overlay);
+
 
     function getLevel(value) {
         if (value < 35) return "Low";
