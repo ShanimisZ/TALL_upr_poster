@@ -110,5 +110,4 @@ document.addEventListener("DOMContentLoaded", function() {
             factIcon.addEventListener("click", toggleFactBox);
             nextFactBtn.addEventListener("click", showNextFact);
             factOverlay.addEventListener("click", toggleFactBox);
-        });
 });
