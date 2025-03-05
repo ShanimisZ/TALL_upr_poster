@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const factBox = document.getElementById("factBox");
     const factText = document.getElementById("factText");
     const nextFactBtn = document.getElementById("nextFactBtn");
-    const overlay = document.createElement("div");
+    const factOverlay = document.getElementById("factOverlay");
     overlay.classList.add("fact-overlay");
     document.body.appendChild(overlay);
 
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
     analyzeButton.addEventListener("click", updateResult);
     resetButton.addEventListener("click", resetSliders);
 
-      const facts = [
+     const facts = [
         "As UPR can lead to drug resistance, understanding ER stress/UPR signals is crucial for anti-cancer therapies. (PMC7072709)",
         "There is cross talk between the IRE1 and PERK branches of the UPR, where IRE1 helps sustain PERK expression. (Nature, 2024)",
         "IRE1 and ATF6 overexpression in many cancers suggests their role in tumor progression. (AACR, 2015)",
@@ -94,15 +94,15 @@ document.addEventListener("DOMContentLoaded", function() {
             function toggleFactBox() {
                 if (factBox.classList.contains("show")) {
                     factBox.classList.remove("show");
-                    overlay.style.display = "none";
+                    factOverlay.style.display = "none";
                     setTimeout(() => {
                         factBox.style.display = "none";
-                    }, 400);
+                    }, 300);
                 } else {
                     factBox.style.display = "block";
                     setTimeout(() => {
                         factBox.classList.add("show");
-                        overlay.style.display = "block";
+                        factOverlay.style.display = "block";
                     }, 10);
                     showNextFact();
                 }
@@ -110,6 +110,6 @@ document.addEventListener("DOMContentLoaded", function() {
         
             factIcon.addEventListener("click", toggleFactBox);
             nextFactBtn.addEventListener("click", showNextFact);
-            overlay.addEventListener("click", toggleFactBox); // Clicking outside closes the box
+            factOverlay.addEventListener("click", toggleFactBox);
         });
 });
