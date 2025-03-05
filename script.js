@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         resultText.textContent = "";
-        resultText.style.color = isHypothesis ? "#FFAA64" : "#E9C9FF";
+        resultText.style.color = isHypothesis ? "#FFAA64" : "#9355aa";
 
         // Typing effect
         let i = 0;
