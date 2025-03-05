@@ -124,19 +124,20 @@ h2 {
 .reset-button:hover {
     background: #555;
 }
+
 /* Fact Box - Initially Hidden */
 .fact-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px; /* Adjusted spacing */
+    margin-top: 40px; /* Increased spacing */
 }
 
 .fact-icon {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-    width: 60px; /* Slightly larger for better visibility */
+    width: 60px; /* Better visibility */
 }
 
 .fact-icon:hover {
@@ -147,40 +148,25 @@ h2 {
 .fact-box {
     display: none;
     position: absolute;
-    top: -140px; /* Moves higher above the icon */
+    top: -100px; /* Adjusted for better visibility */
     left: 50%;
-    transform: translateX(-50%) rotateY(90deg);
+    transform: translateX(-50%) scale(0.8);
     background-color: white;
-    border: 2px solid #B388C3; /* Dark lavender */
+    border: 2px solid #B388C3;
     border-radius: 10px;
     padding: 15px;
     width: 280px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    transition: transform 0.4s ease-in-out, opacity 0.3s;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
     opacity: 0;
 }
 
-/* When Active - Rotates In */
+/* When Active - Smooth Rotation In */
 .fact-box.show {
     display: block;
-    transform: translateX(-50%) rotateY(0deg);
+    transform: translateX(-50%) scale(1);
     opacity: 1;
-}
-
-/* Button Inside Fact Box */
-#nextFactBtn {
-    margin-top: 10px;
-    padding: 6px 12px;
-    background-color: #D65780; /* Dark pink */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#nextFactBtn:hover {
-    background-color: #B24567;
 }
 
 /* Click Outside to Close Fact Box */
@@ -193,6 +179,21 @@ h2 {
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 10;
+}
+
+/* Button Inside Fact Box */
+#nextFactBtn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #D65780;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#nextFactBtn:hover {
+    background-color: #B24567;
 }
 
 
