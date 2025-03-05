@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const factText = document.getElementById("factText");
     const nextFactBtn = document.getElementById("nextFactBtn");
     const factOverlay = document.getElementById("factOverlay");
+    const feedbackInput = document.getElementById("feedback-box");
+    const sendButton = document.getElementById("sendFeedback");
 
     // Facts Array
     const facts = [
@@ -92,4 +94,18 @@ document.addEventListener("DOMContentLoaded", function () {
     factIcon.addEventListener("click", toggleFactBox);
     nextFactBtn.addEventListener("click", showNextFact);
     factOverlay.addEventListener("click", toggleFactBox);
+  
+    // Ensure button exists before adding event listener
+    if (sendButton) {
+        sendButton.addEventListener("click", function () {
+            const feedback = feedbackInput.value.trim();
+            if (feedback === "") {
+                alert("Please enter a message before sending.");
+            } else {
+                alert("Thank you for your feedback!");
+                feedbackInput.value = ""; // Clears the input field
+            }
+        });
+    }
+    
 });
