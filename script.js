@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const perkSlider = document.getElementById("perk");
     const ire1Slider = document.getElementById("ire1");
     const resultText = document.getElementById("result");
-    const checkButton = document.getElementById("checkTALL");
+    const checkButton = document.getElementById("check-button");
     const resetButton = document.getElementById("resetExperiment");
     const factButton = document.getElementById("factButton");
     const factBox = document.getElementById("factBox");
