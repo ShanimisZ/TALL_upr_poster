@@ -20,20 +20,21 @@
         <div class="section">
             <h2><img src="icons/game.png" alt="Game Icon" class="icon"> Interactive UPR Equalizer Game</h2>
             <p>Move the sliders to adjust ATF6, PERK, and IRE1 levels. Click the button to see how T-ALL progression responds!</p>
-            <div class="equalizer">
-                <div class="slider-container">
-                    <label for="atf6">ATF6:</label>
-                    <input type="range" id="atf6" min="0" max="100" value="50" class="slider">
-                </div>
-                <div class="slider-container">
-                    <label for="perk">PERK:</label>
-                    <input type="range" id="perk" min="0" max="100" value="50" class="slider">
-                </div>
-                <div class="slider-container">
-                    <label for="ire1">IRE1:</label>
-                    <input type="range" id="ire1" min="0" max="100" value="50" class="slider">
-                </div>
+           <div class="equalizer">
+            <div class="slider-container">
+                <label for="atf6">ATF6:</label>
+                <input type="range" id="atf6" class="slider" min="0" max="100" value="50">
             </div>
+            <div class="slider-container">
+                <label for="perk">PERK:</label>
+                <input type="range" id="perk" class="slider" min="0" max="100" value="50">
+            </div>
+            <div class="slider-container">
+                <label for="ire1">IRE1:</label>
+                <input type="range" id="ire1" class="slider" min="0" max="100" value="50">
+            </div>
+        </div>
+
             <p id="result">Adjust the sliders and click below to see the effect.</p>
             <button id="check-button">Check if T-ALL will Progress</button>
             <button id="reset-button">Reset Experiment</button>
