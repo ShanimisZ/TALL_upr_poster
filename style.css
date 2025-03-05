@@ -273,19 +273,19 @@ textarea {
     background-color: #B24567;
 }
 
-/* Feedback Section */
+/* Feedback Form Styling */
 .feedback-container {
     margin-top: 20px;
     text-align: center;
 }
 
-textarea {
+input, textarea {
     width: 80%;
-    height: 60px;
+    padding: 10px;
+    margin: 8px 0;
     border: 1px solid #CCC;
     border-radius: 5px;
-    padding: 10px;
-    resize: none;
+    font-size: 1em;
 }
 
 .send-button {
