@@ -169,61 +169,6 @@ textarea {
     margin-top: 20px;
 }
 
-/* Fact Box */
-.fact-box {
-    display: none;
-    position: absolute;
-    top: -120px;
-    left: 50%;
-    transform: translateX(-50%) scale(0.8);
-    background-color: white;
-    border: 2px solid #B388C3;
-    border-radius: 10px;
-    padding: 15px;
-    width: 280px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: transform 0.3s ease-in-out, opacity 0.3s;
-    opacity: 0;
-    z-index: 11; /* Ensure fact box is above overlay */
-}
-
-/* When Active */
-.fact-box.show {
-    display: block;
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
-}
-
-/* Overlay - Adjusted so it only appears behind the box */
-.fact-overlay {
-    display: none;
-    position: absolute; /* Change from fixed to absolute */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.15); /* Lighter background to avoid full-screen darkness */
-    z-index: 10; /* Behind the fact box */
-}
-
-/* Button Styling */
-.action-button {
-    background: linear-gradient(to right, #D65780, #974EC3);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    font-weight: bold;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.action-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
 /* Fact Container - Keep It Centered */
 .fact-container {
     position: relative;
