@@ -1,63 +1,53 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #F2F2F2;
+    background-color: #F8F4FF;
     text-align: center;
     color: #1B3A5E;
 }
 
 h1 {
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 2em;
-    font-weight: 700;
+    font-size: 2.2em;
     color: #D65780;
-    margin-bottom: 10px;
 }
 
-.result {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #C69CFF;
-    margin-top: 20px;
+h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #A655E2;
 }
 
-/* Sliders */
-.equalizer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 40px;
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.slider-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.vertical-slider {
-    -webkit-appearance: none;
+.slider {
     appearance: none;
-    width: 15px;
-    height: 150px;
-    background: linear-gradient(to bottom, #FF79C6, #BD93F9);
-    border-radius: 8px;
+    height: 12px;
+    background: linear-gradient(to right, #D65780, #A655E2);
+    border-radius: 6px;
 }
 
-.vertical-slider::-webkit-slider-thumb {
-    width: 25px;
-    height: 25px;
-    background: #ff79c6;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* Buttons */
-.check-btn, .reset-btn {
-    background-color: #D65780;
+button {
+    background: #D65780;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
+    padding: 10px 15px;
     margin: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #A655E2;
+}
+
+.reset-button {
+    background: #808080;
 }
