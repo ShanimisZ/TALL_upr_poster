@@ -10,27 +10,22 @@ h1 {
     font-size: 2em;
     font-weight: 700;
     color: #D65780;
+    margin-bottom: 10px;
 }
 
-h2 {
-    color: #D65780;
-    font-size: 1.5em;
+.result {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #C69CFF;
+    margin-top: 20px;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
+/* Sliders */
 .equalizer {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin: 20px 0;
+    align-items: flex-end;
+    gap: 40px;
 }
 
 .slider-container {
@@ -39,41 +34,30 @@ h2 {
     align-items: center;
 }
 
-.slider {
-    width: 20px;
+.vertical-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
     height: 150px;
-    writing-mode: vertical-lr;
-    appearance: slider-vertical;
+    background: linear-gradient(to bottom, #FF79C6, #BD93F9);
+    border-radius: 8px;
 }
 
-.result {
-    font-weight: bold;
-    color: #E9C9FF;
-}
-
-button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
+.vertical-slider::-webkit-slider-thumb {
+    width: 25px;
+    height: 25px;
+    background: #ff79c6;
+    border-radius: 50%;
     cursor: pointer;
 }
 
-button#checkBtn {
+/* Buttons */
+.check-btn, .reset-btn {
     background-color: #D65780;
     color: white;
-}
-
-button.reset {
-    background-color: #777;
-    color: white;
-}
-
-button:hover {
-    opacity: 0.8;
-}
-
-textarea {
-    width: 70%;
-    padding: 10px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
 }
