@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const factOverlay = document.getElementById("factOverlay");
 
     // Facts Array
-   const facts = [
+    const facts = [
         "As UPR can lead to drug resistance, understanding ER stress/UPR signals is crucial for anti-cancer therapies. (PMC7072709)",
         "There is cross talk between the IRE1 and PERK branches of the UPR, where IRE1 helps sustain PERK expression. (Nature, 2024)",
         "IRE1 and ATF6 overexpression in many cancers suggests their role in tumor progression. (AACR, 2015)",
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     factIcon.addEventListener("click", toggleFactBox);
     factOverlay.addEventListener("click", toggleFactBox);
-
+    
     function getLevel(value) {
         if (value < 35) return "Low";
         if (value <= 75) return "Medium";
