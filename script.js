@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const factBox = document.getElementById("factBox");
     const factText = document.getElementById("factText");
     const nextFactBtn = document.getElementById("nextFactBtn");
+    const overlay = document.createElement("div");
+    overlay.classList.add("fact-overlay");
+    document.body.appendChild(overlay);
 
     function getLevel(value) {
         if (value < 35) return "Low";
@@ -75,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function() {
     resetButton.addEventListener("click", resetSliders);
 
       const facts = [
-        "As UPR can lead to drug resistance, a better understanding of ER stress/UPR signals has the potential to develop effective anti-cancer therapies. (PMC7072709)",
-        "We demonstrate cross talk between the IRE1 and PERK branches of the UPR, where IRE1 helps sustain PERK expression. (Nature, 2024)",
-        "The overexpression of IRE1 and ATF6 in many cancers suggests their role in tumor progression. (AACR, 2015)",
+        "As UPR can lead to drug resistance, understanding ER stress/UPR signals is crucial for anti-cancer therapies. (PMC7072709)",
+        "There is cross talk between the IRE1 and PERK branches of the UPR, where IRE1 helps sustain PERK expression. (Nature, 2024)",
+        "IRE1 and ATF6 overexpression in many cancers suggests their role in tumor progression. (AACR, 2015)",
         "UPR inhibits antigen presentation, suppressing T-cell-dependent anticancer immunity. (BioSignaling, 2023)"
             ];
         
@@ -88,9 +91,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 factText.textContent = facts[factIndex];
             }
         
-            factIcon.addEventListener("click", function () {
+            function toggleFactBox() {
                 if (factBox.classList.contains("show")) {
                     factBox.classList.remove("show");
+                    overlay.style.display = "none";
                     setTimeout(() => {
                         factBox.style.display = "none";
                     }, 400);
@@ -98,11 +102,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     factBox.style.display = "block";
                     setTimeout(() => {
                         factBox.classList.add("show");
+                        overlay.style.display = "block";
                     }, 10);
                     showNextFact();
                 }
-            });
+            }
         
+            factIcon.addEventListener("click", toggleFactBox);
             nextFactBtn.addEventListener("click", showNextFact);
+            overlay.addEventListener("click", toggleFactBox); // Clicking outside closes the box
         });
 });
