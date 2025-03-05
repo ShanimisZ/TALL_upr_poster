@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const factIcon = document.getElementById("factIcon");
     const factBox = document.getElementById("factBox");
     const factText = document.getElementById("factText");
+    const nextFactBtn = document.getElementById("nextFactBtn");
 
     function getLevel(value) {
         if (value < 35) return "Low";
@@ -73,32 +74,35 @@ document.addEventListener("DOMContentLoaded", function() {
     analyzeButton.addEventListener("click", updateResult);
     resetButton.addEventListener("click", resetSliders);
 
-        const facts = [
+      const facts = [
         "As UPR can lead to drug resistance, a better understanding of ER stress/UPR signals has the potential to develop effective anti-cancer therapies. (PMC7072709)",
         "We demonstrate cross talk between the IRE1 and PERK branches of the UPR, where IRE1 helps sustain PERK expression. (Nature, 2024)",
         "The overexpression of IRE1 and ATF6 in many cancers suggests their role in tumor progression. (AACR, 2015)",
         "UPR inhibits antigen presentation, suppressing T-cell-dependent anticancer immunity. (BioSignaling, 2023)"
-    ];
-
-    let factIndex = 0;
-
-    function showNextFact() {
-        factIndex = (factIndex + 1) % facts.length;
-        factText.textContent = facts[factIndex];
-    }
-
-    factIcon.addEventListener("click", function () {
-        if (factBox.classList.contains("show")) {
-            factBox.classList.remove("show");
-            setTimeout(() => {
-                factBox.style.display = "none";
-            }, 400);
-        } else {
-            factBox.style.display = "block";
-            setTimeout(() => {
-                factBox.classList.add("show");
-            }, 10);
-            showNextFact();
-        }
-    });
+            ];
+        
+            let factIndex = 0;
+        
+            function showNextFact() {
+                factIndex = (factIndex + 1) % facts.length;
+                factText.textContent = facts[factIndex];
+            }
+        
+            factIcon.addEventListener("click", function () {
+                if (factBox.classList.contains("show")) {
+                    factBox.classList.remove("show");
+                    setTimeout(() => {
+                        factBox.style.display = "none";
+                    }, 400);
+                } else {
+                    factBox.style.display = "block";
+                    setTimeout(() => {
+                        factBox.classList.add("show");
+                    }, 10);
+                    showNextFact();
+                }
+            });
+        
+            nextFactBtn.addEventListener("click", showNextFact);
+        });
 });
