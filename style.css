@@ -176,6 +176,15 @@ textarea {
     background-color: #974EC3;
 }
 
+.result {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #B388C3; /* Darker shade of lavender */
+    margin-top: 20px;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+}
+
 /* Footer */
 .footer {
     font-size: 0.8em;
