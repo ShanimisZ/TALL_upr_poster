@@ -1,28 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shani Mistriel Zerbib - ThymUS 2025</title>
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #fafafa; color: #222; margin: 40px; text-align: center; }
-    h1 { color: #5f4b8b; }
-    .button { background-color: #ff7e79; color: white; padding: 15px 30px; text-decoration: none; font-size: 18px; border-radius: 8px; display: inline-block; margin-top: 20px; }
-    iframe { width: 100%; height: 800px; border: none; margin-top: 30px; }
-    footer { margin-top: 50px; font-size: 14px; color: #666; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPR Equalizer Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+        <h1>Welcome to the Interactive UPR</h1>
+        <p>This site hosts the interactive equalizer game and additional insights.</p>
+        <div class="poster-info">
+            <h2>📌 Find My Poster</h2>
+            <p>My poster is located at <strong>Station #8</strong>. Come check it out!</p>
+            
+            <a href="poster.pdf" download class="poster-button">📄 Download Poster PDF</a>
+</        div>
+        
+        <div class="section">
+            <h2><img src="icons/science.png" alt="Science Icon" class="icon"> The Science Behind the Game</h2>
+            <p>The <b>Unfolded Protein Response (UPR)</b> is a critical cellular pathway that helps cancer cells adapt to stress. In <b>T-cell Acute Lymphoblastic Leukemia (T-ALL)</b>, UPR activation can be both <b>a survival advantage</b> and <b>a therapeutic vulnerability</b>. My research explores how <b>modulating UPR components (ATF6, PERK, IRE1)</b> impacts T-ALL progression.</p>
+        </div>
 
-<h1>Welcome! Explore my ThymUS 2025 poster</h1>
-<p>Manipulating the Unfolded Protein Response for T-ALL Treatment</p>
+        <div class="section">
+            <h2><img src="icons/game.png" alt="Game Icon" class="icon"> Interactive UPR Equalizer Game</h2>
+            <p>Move the sliders to adjust ATF6, PERK, and IRE1 levels. Click the button to see how T-ALL progression responds!</p>
+           <div class="equalizer">
+            <div class="slider-container">
+                <label for="atf6">ATF6:</label>
+                <input type="range" id="atf6" class="slider" min="0" max="100" value="50">
+            </div>
+            <div class="slider-container">
+                <label for="perk">PERK:</label>
+                <input type="range" id="perk" class="slider" min="0" max="100" value="50">
+            </div>
+            <div class="slider-container">
+                <label for="ire1">IRE1:</label>
+                <input type="range" id="ire1" class="slider" min="0" max="100" value="50">
+            </div>
+        </div>
 
-<iframe src="ThymUS_2025_Poster_Shani.pdf"></iframe>
+            <p id="result" class="result">Adjust the sliders and click below to analyze.</p>
 
-<a href="your_game_link_here" class="button">Play the UPR Disruptor Game</a>
+            <div class="button-container">
+                <button id="analyze-btn" class="action-button">🔬 Analyze UPR Impact</button>
+                <button id="reset-btn" class="action-button reset-button">🔄 Restart Experiment</button>
+            </div>
+        </div>
 
-<footer>
-  <p>Presented at ThymUS 2025, Hawai’i<br>Shani Mistriel Zerbib</p>
-</footer>
+       <div class="fact-container">
+            <img id="factIcon" src="icons/fact.png" alt="Did You Know?" class="fact-icon">
+            <div id="factBox" class="fact-box">
+                <p id="factText">Loading scientific fact...</p>
+                <button id="nextFactBtn">Next Fact</button>
+            </div>
+        </div>
+        <div id="factOverlay" class="fact-overlay"></div>
 
+        <div class="section">
+            <h2><img src="icons/about.png" alt="About Icon" class="icon"> About Me</h2>
+            <p>Hi, I'm <b>Shani Mistriel Zerbib</b>, PhD Candidate in Experimental Immunology. My research focuses on <b>targeting the Unfolded Protein Response (UPR) in T-ALL</b> to develop new therapeutic strategies. I specialize in <b>mouse models, flow cytometry, and leukemia biology</b>.</p>
+            <p><a href="https://www.linkedin.com/in/shani-zerbib-mistriel-70a89171/">LinkedIn</a> | <a href="https://orcid.org/0000-0002-4953-2193">ORCID</a> | <a href="mailto:shani.mitriel@mail.huji.ac.il">📩 Email Me</a></p>
+        </div>
+
+        <div class="section">
+            <h2><img src="icons/feedback.png" alt="Feedback Icon" class="icon"> Questions? Feedback?</h2>
+            <p>Have thoughts about my research? Let me know!</p>
+            <form id="feedbackForm" action="https://formsubmit.co/mistrielsni@gmail.com" method="POST">
+                <form id="feedbackForm" action="https://formsubmit.co/mistrielsni@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name (Optional)">
+                <input type="email" name="email" placeholder="Your Email (Optional)">
+                <textarea id="feedback-box" name="message" placeholder="Share your thoughts..." required></textarea>
+                
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://shanimisz.github.io/TALL_upr_poster/Thank_you.html">
+                
+                <button type="submit" class="send-button">Send</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
